@@ -4,6 +4,9 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { useRouter } from 'next/router';
 
+//30秒就重新验证获取新数据
+export const revalidate=30 
+
 async function getData(slug:any ) {
     const query = `
      *[_type=="blog" && slug.current =="初级前端面试题总结"] {
