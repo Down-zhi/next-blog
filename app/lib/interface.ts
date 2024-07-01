@@ -1,11 +1,12 @@
 export interface simpleBlogCard{
     title:string;
     smallDescription:string;
-    currentSlug:string;
-    titleImage:any
+    currentSlug:any;
+    titleImage:any;
+    date:any
 }
 export interface fullBlog{
-    currentSlug:string;
+    currentSlug:any;
     title:string;
     content:any;
     titleImage:any

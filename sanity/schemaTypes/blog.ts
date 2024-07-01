@@ -11,15 +11,25 @@ export default {
             title:'Title of blog article',
         },
         {
+            name:'date',
+            type:'date',
+            title:'Publication Date',
+            "options": { 
+                "dateFormat": "YYYY-MM-DD", 
+                "calendarTodayLabel": "Today" 
+              }
+
+        },
+        {
             name:'slug',
             type:'slug',
             title:'Slug of your blog article',
             options:{
                 source:'title',
-                slugify: (input: string) => input
-                .toLowerCase() 
-                .replace(/\s+/g, '-') 
-                // .replace(/[\u4e00-\u9fa5]/g, '') // 移除中文字符，如果需要中文slug则不需要这行
+                // slugify: (input: string) => input 后面取数据要它的全部值根本不需要配置这个
+                // .toLowerCase() 
+                // .replace(/\s+/g, '-') 
+                // .replace(/[\u4e00-\u9fa5]/g, '') 
                 }
         },
         {
